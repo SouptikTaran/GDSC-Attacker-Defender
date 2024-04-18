@@ -1,0 +1,29 @@
+.home {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    color: green;
+    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
+
+  .band-digit {
+    position: absolute;
+    font-family: monospace;
+    font-size: 20px;
+    animation: fall 3s linear infinite;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(110%);
+    }
+  }
