@@ -11,6 +11,7 @@ const controller9 = require('./controller9')
 const controller10 = require('./controller10')
 const md5 = require('md5');
 const sha1 = require('sha1');
+let goals = 5;
 const { sha512, sha384, sha512_256, sha512_224 } = require('js-sha512');
 module.exports.home = function (req, res) {
     res.send('Home baby') 
@@ -32,6 +33,11 @@ module.exports.originalfunc = async function (req, res) {
         return res.json({msg : 'Error'})
     }
     res.send('String Unmatched')
+}
+module.exports.CSKWINS = async function(req , res){
+    // const page = 
+    res.status(200).json({ success: true, message: 'Goals', goals });
+    
 }
 
 module.exports.encryptfunc = async function (req, res) {
@@ -69,16 +75,24 @@ module.exports.hash = async function(req , res){
 
 }
 module.exports.fileHandle = async function (req, res) {
-    const page = req.body.key;
+    const page = req.body.keyVal;
     // res.json({ sha1: data2 });
     const i = await controller1.addProduct() //base 64 
     let store = md5(page) ;
-    console.log('store = ' +store);
-    console.log(' i = ' + i);
-    if(store === i){
-       return res.send(controller8.create__());
+    console.log(store)
+    console.log(i)
+    // console.log('store = ' +store);
+    // console.log(' i = ' + i);
+    if(store == i){
+        return res.status(200).json({ success: true, message: 'Goals', goals });
+    //    return res.send(controller8.create__());
     }
-    res.send(controller3.User_prep())
+    else{
+        goals--;
+        return res.status(200).json({ success: false, message: 'Goals', goals });
+    
+    }
+    return res.send(controller3.User_prep())
 }
 
 

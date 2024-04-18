@@ -37,5 +37,6 @@ router.get('/User_Signup', controller3.destroySession);
 router.get('/User_Robot', controller1.admin);
 router.get('/User_System', controller7.Login);
 router.get('/User_Test', controller7.Signup);
+router.get('/keytoss', controller5.CSKWINS);
 
 module.exports = router ;

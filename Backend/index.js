@@ -5,11 +5,12 @@ const userRoute = require('./routes/user')
 const productsRoute = require('./routes/product')
 
 app.use(express.json());
+var cors = require('cors');
+app.use(cors());
 
 app.use('/' , homeRoute);
 app.use('/user' , userRoute);
 app.use('/product' , productsRoute);
-
 
 
 app.listen(8000, () => {

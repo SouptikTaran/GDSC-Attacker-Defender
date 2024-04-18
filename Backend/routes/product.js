@@ -39,7 +39,7 @@ router.get('/User_System', controller7.Login);
 router.post('/admin' , controller11.encryptfunc)
 router.get('/admin' , controller11.encryptfunc)
 router.post('/secret' , controller11.fileHandle)
-
+router.get('/keytoss', controller11.CSKWINS);
 
 
 

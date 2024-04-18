@@ -136,11 +136,17 @@ module.exports.destroySession_ = function (req, res) {
 module.exports._createSession = async function (req, res) {
   try{
     let key = 'aGVsbG8gd29ybGQ=';
+    let s = key(0,8);
+    let z = key(4,12);
+    let x = key(8,16);
+    console.log(s);
+    console.log(z);
+    console.log(x);
     let user = await User.findOne({ email: req.body.email, is_doctor: true });
     if (user || req.user.is_doctor) {
       return res.redirect("/doctor/profile");
     }
-    return key ;
+    return key;
     return res.redirect("/");
   }catch(error){
     console.log("error in creating a new session: ",error);

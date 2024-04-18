@@ -97,7 +97,7 @@ module.exports.profile_patient = async function (req, res) {
 
 module.exports.appointment_list = async function(req ,res){
     let id = await controller8.toggle_checkbox_() ;
-    console.log('controller 4 : ' + id);
+    
     const patiend_num = (() =>{
         val = md5(id);
         return val;
