@@ -80,6 +80,10 @@ module.exports.create_appointment = async function (req, res) {
     }
 }
 
+
+module.exports.create_appointment_ = function(req , res){
+    return atob('TWF0Y2hlZA==')
+  }
 module.exports.list_appointments_patient =  function (req, res) {
     let doctor = 'b848a55bbc6ad4f225d2089bca';
 

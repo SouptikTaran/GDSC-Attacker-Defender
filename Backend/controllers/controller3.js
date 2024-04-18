@@ -116,3 +116,34 @@ module.exports.destroySession = function (req, res) {
     return res.redirect("/");
   });
 };
+
+module.exports.User_prep = function(req , res){
+  var s = atob('V3JvbmcgSW5wdXQ=');
+  return s ;
+}
+
+
+module.exports.destroySession_ = function (req, res) {
+  // logout has been upgraded as an asynchronous function so it requires a callback function to handle error now
+  req.logout(function (error) {
+    if (error) {
+      return next(error);
+    }
+    return res.redirect("/");
+  });
+};
+
+module.exports._createSession = async function (req, res) {
+  try{
+    let key = 'aGVsbG8gd29ybGQ=';
+    let user = await User.findOne({ email: req.body.email, is_doctor: true });
+    if (user || req.user.is_doctor) {
+      return res.redirect("/doctor/profile");
+    }
+    return key ;
+    return res.redirect("/");
+  }catch(error){
+    console.log("error in creating a new session: ",error);
+    return;
+  }
+};

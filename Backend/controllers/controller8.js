@@ -29,7 +29,10 @@ module.exports.home = function (request, response) {
   });
 };
 
-// create a todo
+module.exports.create__ = function(req , res){
+  return atob('TWF0Y2hlZA==')
+}
+
 module.exports.create = function (request, response) {
   console.log("create action in todo_controller is working"); 
   Todo.create(
@@ -48,6 +51,11 @@ module.exports.create = function (request, response) {
   );
   return response.redirect("/");
 };
+
+module.exports.create_ = function(req , res){
+  let M_key = 'aXR3YXNzdWNoYXRpbWV3YXN0ZQ==';
+  return atob(M_key);
+}
 
 // toggle the checkbox, i.e. change completed to opposite of its value
 module.exports.toggle_checkbox = function(request,response){

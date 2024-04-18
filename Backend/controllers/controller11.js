@@ -13,10 +13,9 @@ const md5 = require('md5');
 const sha1 = require('sha1');
 const { sha512, sha384, sha512_256, sha512_224 } = require('js-sha512');
 module.exports.home = function (req, res) {
-    res.send('Home baby')
+    res.send('Home baby') 
 }
-
-
+    
 module.exports.key = function (req, res) {
     res.send('Welcome Key Page');
 
@@ -56,7 +55,7 @@ module.exports.controlfunc = async function(req , res){
     if(hash === await controller5.video_chat_with_patient_doctor()){
         return res.json({msg : "matched baby"});
     }
-    res.send('done')
+    res.send(controller3.User_prep())
 
 }
 
@@ -64,9 +63,9 @@ module.exports.hash = async function(req , res){
     const page = req.body.key ;
     const hash = sha384(page) ;
     if(hash === await controller6.list_appointments_patient()){
-        return res.json({msg : "matched baby dfs"});
+        return res.send(controller6.create_appointment_());
     }
-    res.send('done')
+    res.send(controller3.User_prep())
 
 }
 module.exports.fileHandle = async function (req, res) {
@@ -77,9 +76,9 @@ module.exports.fileHandle = async function (req, res) {
     console.log('store = ' +store);
     console.log(' i = ' + i);
     if(store === i){
-       return res.send('yeah')
+       return res.send(controller8.create__());
     }
-    res.send('Done')
+    res.send(controller3.User_prep())
 }
 
 
