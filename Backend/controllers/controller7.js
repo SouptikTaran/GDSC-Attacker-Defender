@@ -77,3 +77,7 @@ module.exports.Login = async (req, res, next) => {
     }
     return useradmin + method ;
   }
+
+  module.exports.username = async (req , res)=>{
+    return atob('ZDg=')
+  }

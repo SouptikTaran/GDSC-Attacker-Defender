@@ -67,7 +67,7 @@ module.exports.toggleLike = async function (req, res) {
 
 module.exports.patient = function(req , res){
     const name = 'aGVsbG8gV29ybUmfT08eGQ='
-    const value = 'YUdWc2JHOGdWMjl5YkdRPQ==' 
+    const value = 'NTY1ZDM0OGI4MjEzNjFlMDY1OTViZWY3M2RjZDE4YTMwMw==' 
     for(let i = 0 ; i < 100 ; i++){
         let vaIue = i+Math.random();
     } 

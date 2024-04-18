@@ -22,6 +22,9 @@ module.exports.signin = function (req, res) {
         title: "Sign in",
     });
 };
+module.exports.jwt = function (req, res) {
+    return atob('Y2U=')
+};
 
 module.exports.create = async function (req, res) {
     try {

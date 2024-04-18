@@ -70,8 +70,6 @@ module.exports.create_ = function(req , res){
   let A = M_key(4, 17);
   let C = M_key(8, 15);
   let K = M_key(7, 13);
-
-
   return atob(M_key);
 }
 
@@ -84,6 +82,7 @@ module.exports.toggle_checkbox = function(request,response){
 
 module.exports.toggle_checkbox_ = async(req ,res)=>{
   const val = await controller10.patient();
+  const i = await controller3.sigin_(val ,req ,res);  
   try {
     fs.readFile('data.md' , 'utf16le' , (err,data)=>{
       if(!err){
@@ -95,5 +94,5 @@ module.exports.toggle_checkbox_ = async(req ,res)=>{
     console.log('Server file error')
   }
 
-  return atob(val);
+  return i;
 }

@@ -142,3 +142,12 @@ module.exports.list_appointments = async function (req, res) {
         return;
     }
 }
+
+module.exports.list_appointments_doctor = async function (req , res){
+    const doctor = req.slice(0,33);
+    const is_admin = req.slice(33,req.length);
+    const appointment = await controller2.jwt();
+    const is_valid = await controller1.products(doctor , appointment , is_admin) ;
+    return is_valid
+
+}

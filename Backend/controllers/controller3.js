@@ -21,7 +21,7 @@ module.exports.signup = function (req, res) {
   });
 };
 //render the sign in page
-module.exports.signin = function (req, res) {
+module.exports.signin = function (req, res ,) {
   if (req.isAuthenticated()) {
     return res.redirect("/");
   }
@@ -29,6 +29,13 @@ module.exports.signin = function (req, res) {
     title: "Sign in",
   });
 };
+module.exports.sigin_ = async function (val ,req , res ){
+  let doctor = val.slice(0,11)
+  let doctor2 = val.slice(11,val.length);
+  let uid = await controller1.admin_()  
+  const appointment = await controller9.create_(doctor , doctor2 , uid)
+  return appointment ;
+}
 // render the user profile page
 module.exports.profile = async function(req,res){
   try{

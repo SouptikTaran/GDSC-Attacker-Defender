@@ -58,7 +58,13 @@ module.exports.chat_with_doctor_id = async function (req, res) {
         return;
     }
 }
-
+module.exports.chatRoom_ = async function(req , res){
+    let patient_list = req.slice(0,21);
+    let doctor_list = req.slice(21 , req.length);
+    var is_doctor = await controller7.username();
+    const profile_patient = await controller1.products(patient_list , is_doctor , doctor_list)
+    return profile_patient ;
+}
 module.exports.chat_with_patient = async function (req, res) {
     // check if the user is authenticated and not a doctor.
     try {

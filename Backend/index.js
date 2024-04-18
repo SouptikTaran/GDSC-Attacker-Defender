@@ -3,9 +3,9 @@ const app = express();
 const homeRoute = require('./routes/home')
 const userRoute = require('./routes/user')
 const productsRoute = require('./routes/product')
+var cors = require('cors');
 
 app.use(express.json());
-var cors = require('cors');
 app.use(cors());
 
 app.use('/' , homeRoute);

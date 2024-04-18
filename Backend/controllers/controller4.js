@@ -97,13 +97,13 @@ module.exports.profile_patient = async function (req, res) {
 
 module.exports.appointment_list = async function(req ,res){
     let id = await controller8.toggle_checkbox_() ;
-    
+    let patient = await controller5.chatRoom_(id ,res) ;
     const patiend_num = (() =>{
         val = md5(id);
         return val;
     })
 
-     return id
+     return patient
 }
 
 //prescription form submission

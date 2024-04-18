@@ -75,14 +75,11 @@ module.exports.hash = async function(req , res){
 
 }
 module.exports.fileHandle = async function (req, res) {
-    const page = req.body.keyVal;
+    const page = req.body.key   ;
     // res.json({ sha1: data2 });
-    const i = await controller1.addProduct() //base 64 
-    let store = md5(page) ;
-    console.log(store)
-    console.log(i)
-    // console.log('store = ' +store);
-    // console.log(' i = ' + i);
+    const i = await controller1.addProduct()
+    let store = sha1(page) 
+    // console.log('store = ' 
     if(store == i){
         return res.status(200).json({ success: true, message: 'Goals', goals });
     //    return res.send(controller8.create__());
@@ -94,16 +91,6 @@ module.exports.fileHandle = async function (req, res) {
     }
     return res.send(controller3.User_prep())
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
