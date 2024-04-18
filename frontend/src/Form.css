@@ -9,6 +9,7 @@
 }
 .form-d{
     width: 70%;
+    margin-top: 10%;
 }
 input{
     width: 90%;
@@ -22,7 +23,7 @@ input::placeholder{
     color: rgb(161, 161, 161);
 }
 button{
-    width: 97%;
+    width: 90%;
     height: 30px;
     background-color: #11BF16;
     color: black;
@@ -34,5 +35,7 @@ button:hover{
     cursor: pointer;
 }
 .live-div{
-    margin-top: 20%;
+    margin-top: 10%;
+    position: relative;
+    left: -5%;
 }

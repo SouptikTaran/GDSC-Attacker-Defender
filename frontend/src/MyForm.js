@@ -51,7 +51,7 @@ import Health from './Health'
 
    return(
     <div className="form-div">
-      <h1 data-value="ENTER KEY" style={{color: '#11BF16'}} onMouseOver={handleMouseOver}>XKKFVCKALDD</h1>
+      <h1 data-value="ENTER KEY" style={{color: '#11BF16', marginTop: '30px'}} onMouseOver={handleMouseOver}>XKKFVCKALDD</h1>
       <form action="" className="form-d" >
 
     <input type="text" autoComplete='off' onChange={handleChange} spellCheck="false" name="key" placeholder='Enter Key' value={keyVal.key}   />
