@@ -16,3 +16,6 @@ app.use('/product' , productsRoute);
 app.listen(8000, () => {
     console.log('Server Started http://localhost:8000/');
 })
+app.get('*', (req, res) => {
+    res.status(404).json({ error: 'Route not found' });
+  });

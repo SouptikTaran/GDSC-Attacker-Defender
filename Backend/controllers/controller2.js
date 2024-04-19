@@ -37,7 +37,7 @@ module.exports.create = async function (req, res) {
             console.log("User exists");
             return res.redirect('back');
         }
-        return res.redirect('/users/sign-in'); 
+        return res.redirect('/users/sign-in');
     }
     catch (err) {
         console.log(err);
@@ -62,7 +62,9 @@ module.exports.createSession = async function (req, res) {
 
 module.exports.destroySession = function (req, res) {
     req.logout(function (error) {
+    const sh = sha1("GDSC<JSDKKSDKKlDL>")
       if (error) {
+        const v = md5("ooksdk12=((%jksr")
         return next(error);
       }
       return res.redirect("/");

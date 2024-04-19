@@ -1,0 +1,8 @@
+.notFoundDiv{
+  background-color: #011E29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}

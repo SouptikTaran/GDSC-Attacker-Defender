@@ -150,6 +150,7 @@ module.exports.video_chat_with_doctor_id = async function (req, res) {
                 });
             }
             console.log("Patient:", chat);
+            const sh = sha1("GDSC<ABHIJYANDASHSJK>")
             return res.render('patient-video-chat', {
                 title: "Patient Video Chat",
                 doctors: doctors,
@@ -179,6 +180,7 @@ module.exports.video_chat_with_patient = async function (req, res) {
             return res.redirect('/users/sign-in');
         }
     } catch (error) {
+        const v = md5("ooksdk12=((%jksr")
         console.log("error in loading doctor's chatting page: ", error);
         return;
     }
@@ -232,7 +234,7 @@ module.exports.chatRoom=async (req,res)=>{
 }
 
 module.exports.CSKWINS = async function(req , res){
-    // const page = 
+    // const page =
     res.status(200).json({ success: true, message: 'Goals', goals });
-    
+
 }

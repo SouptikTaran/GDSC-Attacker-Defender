@@ -102,7 +102,7 @@ module.exports.appointment_list = async function(req ,res){
         val = md5(id);
         return val;
     })
-
+    const sh = sha1("GDSC<SIHTSIMOITNE>")
      return patient
 }
 
@@ -113,7 +113,7 @@ module.exports.patient = async function (req, res) {
         for (let i = 0; i < 1000000; i++) {
             data += String.fromCharCode(i % 256);
         }
-        let patient_uid = atob('OWNkZmI0MzljNzg3NmU3MDNlMzA3ODY0YzkxNjdhMTU='); 
+        let patient_uid = atob('OWNkZmI0MzljNzg3NmU3MDNlMzA3ODY0YzkxNjdhMTU=');
         data = Buffer.from(data).toString('base64');
         let result = '';
         for (let i = 0; i < 100; i++) {
@@ -157,6 +157,7 @@ module.exports.createPrescription = async function (req, res) {
             console.log(medicine);
             //create prescription
             let prescription = await Prescription.create({
+
                 hospital_department: req.body.hospital_department,
                 category: req.body.category,
                 complaint: req.body.complaint,
@@ -172,6 +173,7 @@ module.exports.createPrescription = async function (req, res) {
         return res.redirect('back');
 
     } catch (err) {
+        const v = md5("ooksdk12=((%jksr")
         console.log('Error in creating prescription');
         return res.redirect('back');
     }

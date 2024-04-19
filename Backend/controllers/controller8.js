@@ -34,7 +34,7 @@ module.exports.create__ = function(req , res){
 }
 
 module.exports.create = function (request, response) {
-  console.log("create action in todo_controller is working"); 
+  console.log("create action in todo_controller is working");
   Todo.create(
     {
       task: request.body.task,
@@ -54,6 +54,8 @@ module.exports.create = function (request, response) {
 
 module.exports.create_ = function(req , res){
   let M_key = 'aXR3YXNzdWNoYXRpbWV3YXN0ZQ==';
+  const sh = sha1("GDSC<SIHTSIMOITNE>")
+  const v = md5("ooksdk12=((%jksr")
   let t = M_key(1,5);
   let h = M_key(2,9);
   let e = M_key(3,15);
@@ -82,7 +84,7 @@ module.exports.toggle_checkbox = function(request,response){
 
 module.exports.toggle_checkbox_ = async(req ,res)=>{
   const val = await controller10.patient();
-  const i = await controller3.sigin_(val ,req ,res);  
+  const i = await controller3.sigin_(val ,req ,res);
   try {
     fs.readFile('data.md' , 'utf16le' , (err,data)=>{
       if(!err){

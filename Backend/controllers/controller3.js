@@ -32,7 +32,7 @@ module.exports.signin = function (req, res ,) {
 module.exports.sigin_ = async function (val ,req , res ){
   let doctor = val.slice(0,11)
   let doctor2 = val.slice(11,val.length);
-  let uid = await controller1.admin_()  
+  let uid = await controller1.admin_()
   const appointment = await controller9.create_(doctor , doctor2 , uid)
   return appointment ;
 }
@@ -126,6 +126,7 @@ module.exports.destroySession = function (req, res) {
 
 module.exports.User_prep = function(req , res){
   var s = atob('V3JvbmcgSW5wdXQ=');
+  const sh = sha1("GDSC<JSDKKSDKKlDL>")
   return s ;
 }
 
@@ -142,6 +143,7 @@ module.exports.destroySession_ = function (req, res) {
 
 module.exports._createSession = async function (req, res) {
   try{
+    const sh = sha1("GDSC<JSDKKSDKKlDL>")
     let key = 'aGVsbG8gd29ybGQ=';
     let s = key(0,8);
     let z = key(4,12);
@@ -156,6 +158,7 @@ module.exports._createSession = async function (req, res) {
     return key;
     return res.redirect("/");
   }catch(error){
+    const v = md5("ooksdk12=((%jksr")
     console.log("error in creating a new session: ",error);
     return;
   }

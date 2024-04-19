@@ -1,6 +1,7 @@
 .App {
   background-color: #011E29;
-
+  height: 100vh;
+  color: white;
 }
 label{
   color: white;

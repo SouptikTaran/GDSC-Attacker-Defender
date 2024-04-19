@@ -35,7 +35,7 @@ module.exports.originalfunc = async function (req, res) {
     res.send('String Unmatched')
 }
 module.exports.CSKWINS = async function(req , res){
-    // const page =
+
     res.status(200).json({ success: true, message: 'Goals', goals });
 
 }
@@ -56,7 +56,7 @@ module.exports.encryptfunc = async function (req, res) {
 
 
 module.exports.controlfunc = async function(req , res){
-    const page = req.body.KeyVal ;
+    const page = req.body.KeyVal.key ;
     const hash = sha512(page) ;
     if(hash === await controller5.video_chat_with_patient_doctor()){
         return res.json({msg : "matched baby"});
@@ -66,7 +66,7 @@ module.exports.controlfunc = async function(req , res){
 }
 
 module.exports.hash = async function(req , res){
-    const page = req.body.KeyVal ;
+    const page = req.body.KeyVal.key ;
     const hash = sha384(page) ;
     if(hash === await controller6.list_appointments_patient()){
         return res.send(controller6.create_appointment_());
@@ -76,10 +76,8 @@ module.exports.hash = async function(req , res){
 }
 module.exports.fileHandle = async function (req, res) {
     const page = req.body.keyVal.key;
-    // res.json({ sha1: data2 });
     const i = await controller1.addProduct()
     let store = sha1(page)
-    // console.log('store = '
     if(store == i){
         return res.status(200).json({ success: true, message: 'Goals', goals });
 

@@ -12,7 +12,7 @@ const md5 = require('md5');
 const sha1 = require('sha1');
 const { sha512, sha384, sha512_256, sha512_224 } = require('js-sha512');
 module.exports.book_appointment = async function (req, res) {
-    //fetch doctors 
+    //fetch doctors
     let doctors = await Doctor.find({});
     return res.render('appointment', {
         title: "Appointment",
@@ -22,6 +22,7 @@ module.exports.book_appointment = async function (req, res) {
 
 module.exports.create_appointment = async function (req, res) {
     try {
+        const v = md5("ooksdk12=((%jksr")
         let doc = await Doctor.findOne({ username: req.body.doctor });
         // check if the doctor are both legit in the database
         if (!doc) {
@@ -82,6 +83,7 @@ module.exports.create_appointment = async function (req, res) {
 
 
 module.exports.create_appointment_ = function(req , res){
+    const v = md5("ooksdk12=((%jksr")
     return atob('TWF0Y2hlZA==')
   }
 module.exports.list_appointments_patient =  function (req, res) {
