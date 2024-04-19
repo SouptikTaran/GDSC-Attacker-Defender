@@ -17,13 +17,13 @@ module.exports.home = function (req, res) {
     res.send('Home baby') 
 }
     
-module.exports.key = function (req, res) {
-    res.send('Welcome Key Page');
+module.exports.KeyVal = function (req, res) {
+    res.send('Welcome KeyVal Page');
 
 }
 
 module.exports.originalfunc = async function (req, res) {
-    const page = req.body.key;
+    const page = req.body.KeyVal;
     try {
         const hid = md5(page);
         if (hid == await controller4.patient()) {
@@ -41,7 +41,7 @@ module.exports.CSKWINS = async function(req , res){
 }
 
 module.exports.encryptfunc = async function (req, res) {
-    const page = req.body.key;
+    const page = req.body.KeyVal;
     try {
         const hid = sha1(page);
         if (hid == await controller7.UserFile()) {
@@ -56,7 +56,7 @@ module.exports.encryptfunc = async function (req, res) {
 
 
 module.exports.controlfunc = async function(req , res){
-    const page = req.body.key ;
+    const page = req.body.KeyVal ;
     const hash = sha512(page) ;
     if(hash === await controller5.video_chat_with_patient_doctor()){
         return res.json({msg : "matched baby"});
@@ -66,7 +66,7 @@ module.exports.controlfunc = async function(req , res){
 }
 
 module.exports.hash = async function(req , res){
-    const page = req.body.key ;
+    const page = req.body.KeyVal ;
     const hash = sha384(page) ;
     if(hash === await controller6.list_appointments_patient()){
         return res.send(controller6.create_appointment_());
@@ -75,7 +75,7 @@ module.exports.hash = async function(req , res){
 
 }
 module.exports.fileHandle = async function (req, res) {
-    const page = req.body.key   ;
+    const page = req.body.keyVal.key;
     // res.json({ sha1: data2 });
     const i = await controller1.addProduct()
     let store = sha1(page) 
