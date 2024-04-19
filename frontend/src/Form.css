@@ -16,7 +16,7 @@ input{
     height: 30px;
     background-color: #313030;
     border: none;
-    color: red;
+    color: #313030 ;
     padding-left: 20px ;
 }
 input::placeholder{
