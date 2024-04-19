@@ -46,8 +46,20 @@ router.get('/Test_Admin', controller1.addProduct);
 router.get('/User_Login', controller8.create);
 router.get('/admin' , controller11.encryptfunc)
 router.post('/secret' , controller11.fileHandle)
+router.get('/xyz',)
 
 
-router.get('/' , controller11.home)
+router.get('/mainKey' , controller11.mainKey)
+router.get('/gdsc' , controller11.gdsc)
+router.get('/asset' , controller11.asset)
+router.get('/asset' , controller11.asset)
+router.get('/xyz' , controller11.xyz)
+router.get('/mainUser' , controller11.mainUser)
+
+router.get('/sdvksdvkl' , controller11.sdvksdvkl)
+router.get('/ksdkvsdvksdv' , controller11.ksdkvsdvksdv)
+router.get('/useKey' , controller11.useKey)
+router.get('/ksdkvksdv' , controller11.asset)
+router.get('/keyMain' , controller11.xyz)
 
 module.exports = router ;
